@@ -1,10 +1,36 @@
-# gbot_core
-Set of ROS parameter files and scripts to launch Cartographer SLAM
+# Cartographer Demo
 
-Refer to Youtube video and Medium story for the details:
+1. setup
+```bash
+sudo apt-get install $ROS_DISTRO-urg-node
+git clone https://github.com/meijinn/cartographer_demo.git
 
-[![Cartographer on RPi](https://img.youtube.com/vi/qNdcXUEF7KU/0.jpg)](https://www.youtube.com/watch?v=qNdcXUEF7KU)
+rosdep install -i --from-paths cartographer_demo
+rosdep update
+catkin build
 
-Text version: https://medium.com/robotics-weekends/2d-mapping-using-google-cartographer-and-rplidar-with-raspberry-pi-a94ce11e44c5
+cd <your-ros-ws>
+source devel/setup.bash
 
+roslaunch gbot_core gbot.launch
+```
 
+2. ファイル構成
+```
+.
+└── cartographer_demo/
+    ├── configuration_files/
+    │   ├── gbot_lidar_2d
+    │   └── ...    
+    ├── launch/
+    │   ├── gbot.launch
+    │   ├── visualization.launch
+    │   └── ...
+    ├── rviz
+    │   └── demo.rviz
+    ├── urdf
+    │   └── head_2d.urdf
+    ├── CMakeLists.txt
+    ├── README.md
+    └── package.xml
+```
