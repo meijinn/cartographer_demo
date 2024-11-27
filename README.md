@@ -1,19 +1,8 @@
 # Cartographer Demo
 
-1. setup
-```bash
-sudo apt-get install $ROS_DISTRO-urg-node
-git clone https://github.com/meijinn/cartographer_demo.git
-
-rosdep install -i --from-paths cartographer_demo
-rosdep update
-catkin build
-
-cd <your-ros-ws>
-source devel/setup.bash
-
-roslaunch gbot_core gbot.launch
-```
+1. 確認事項
+センサのIPアドレスはデフォルトで192.168.0.10となっています。
+他のアドレスを使う場合は、launch/gbot.launchのipアドレスの設定を変更してください。
 
 2. ファイル構成
 ```
@@ -33,4 +22,20 @@ roslaunch gbot_core gbot.launch
     ├── CMakeLists.txt
     ├── README.md
     └── package.xml
+```
+
+3. ROSでのソフトウェア環境設定方法
+```bash
+cd <your-ros-ws>/src
+sudo apt-get install $ROS_DISTRO-urg-node
+git clone https://github.com/meijinn/cartographer_demo.git
+
+rosdep install -i --from-paths cartographer_demo
+rosdep update
+catkin build
+
+cd <your-ros-ws>
+source devel/setup.bash
+
+roslaunch gbot_core gbot.launch
 ```
