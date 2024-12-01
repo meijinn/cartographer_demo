@@ -25,6 +25,11 @@
 ```
 
 3. ROSでのソフトウェア環境設定方法
+
+予めこれをやっておく。
+
+https://qiita.com/porizou1/items/c2cb0765bc60caa3f755
+
 ```bash
 cd <your-ros-ws>/src
 sudo apt-get install $ROS_DISTRO-urg-node
