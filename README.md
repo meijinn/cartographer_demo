@@ -28,7 +28,7 @@
 
 予めこれをやっておく。
 
-https://qiita.com/porizou1/items/c2cb0765bc60caa3f755
+https://qiita.com/Decwest/items/ac1a701a2217dd05e1fb
 
 ```bash
 cd <your-ros-ws>/src
